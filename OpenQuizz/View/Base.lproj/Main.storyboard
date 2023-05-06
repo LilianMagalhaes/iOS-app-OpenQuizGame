@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wp7-Sl-4uT">
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Balham.otf">
+            <string>Balham</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Config-->
+        <scene sceneID="nt6-4e-EcR">
+            <objects>
+                <viewController id="dq8-ip-Xvt" customClass="ConfigViewController" customModule="OpenQuizz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="S8X-q9-9dI">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="jkJ-LG-h41">
+                                <rect key="frame" x="20" y="79" width="390" height="221"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Config" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4wS-rD-5tX">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="39.333333333333336"/>
+                                        <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="40"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="j4b-iY-Eqi">
+                                        <rect key="frame" x="0.0" y="70.333333333333343" width="390" height="69.666666666666657"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PMo-na-CWs">
+                                                <rect key="frame" x="0.0" y="0.0" width="390" height="23.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="24"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Default Player" borderStyle="roundedRect" placeholder="Default Player" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="CYe-8U-Ta0">
+                                                <rect key="frame" x="0.0" y="33.666666666666657" width="390" height="36"/>
+                                                <color key="textColor" red="0.35686278339999999" green="0.41568624970000001" blue="0.50196081400000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" returnKeyType="go" textContentType="nickname"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFm-bx-Kmq">
+                                        <rect key="frame" x="0.0" y="171" width="390" height="50"/>
+                                        <color key="backgroundColor" red="0.40392160420000001" green="0.54901963470000004" blue="0.76470589639999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="WPO-AF-FbC"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="OK">
+                                            <fontDescription key="titleFontDescription" name="Balham" family="Balham" pointSize="23"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="createPlayer:" destination="dq8-ip-Xvt" eventType="touchUpInside" id="P9d-cl-24l"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Loading" translatesAutoresizingMaskIntoConstraints="NO" id="M11-N3-JNI">
+                                <rect key="frame" x="90" y="360" width="250" height="290"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Dav-FV-KNC"/>
+                        <color key="backgroundColor" red="0.35686278339999999" green="0.41568624970000001" blue="0.50196081400000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="M11-N3-JNI" firstAttribute="top" secondItem="jkJ-LG-h41" secondAttribute="bottom" constant="60" id="74g-fC-rhc"/>
+                            <constraint firstItem="jkJ-LG-h41" firstAttribute="top" secondItem="Dav-FV-KNC" secondAttribute="top" constant="20" id="ITZ-mU-hNf"/>
+                            <constraint firstItem="Dav-FV-KNC" firstAttribute="trailing" secondItem="M11-N3-JNI" secondAttribute="trailing" constant="90" id="Ias-uq-QoV"/>
+                            <constraint firstItem="jkJ-LG-h41" firstAttribute="leading" secondItem="Dav-FV-KNC" secondAttribute="leading" constant="20" id="aSF-Vj-pYO"/>
+                            <constraint firstItem="M11-N3-JNI" firstAttribute="centerX" secondItem="S8X-q9-9dI" secondAttribute="centerX" id="ieH-sK-3MG"/>
+                            <constraint firstItem="M11-N3-JNI" firstAttribute="leading" secondItem="Dav-FV-KNC" secondAttribute="leading" constant="90" id="w2D-mx-hjh"/>
+                            <constraint firstItem="Dav-FV-KNC" firstAttribute="trailing" secondItem="jkJ-LG-h41" secondAttribute="trailing" constant="20" id="wsR-vi-AD7"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Msk-Yq-G3g" appends="YES" id="c1p-tI-9oc"/>
+                        </connections>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Config" image="gearshape.fill" catalog="system" id="zmZ-vB-sgh"/>
+                    <connections>
+                        <outlet property="userNameTextField" destination="CYe-8U-Ta0" id="TWp-bO-50u"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gLh-Lm-bAz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Msk-Yq-G3g">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="dq8-ip-Xvt" id="oCA-Jf-XTI"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-1228" y="-436.73163418290858"/>
+        </scene>
+        <!--Main Tab Bar Controller-->
+        <scene sceneID="DGM-pG-Jug">
+            <objects>
+                <tabBarController id="wp7-Sl-4uT" customClass="MainTabBarController" customModule="OpenQuizz" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FgG-Lp-Cqs">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="dq8-ip-Xvt" kind="relationship" relationship="viewControllers" id="05f-eA-Wfy"/>
+                        <segue destination="XFD-IV-6Kz" kind="relationship" relationship="viewControllers" id="baE-yo-I1l"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ydd-DY-PMf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2129" y="-58"/>
+        </scene>
+        <!--Game-->
+        <scene sceneID="514-yn-KiO">
+            <objects>
+                <navigationController id="XFD-IV-6Kz" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Game" image="gamecontroller.fill" catalog="system" id="sVe-f4-Slv">
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="CBm-7X-8b9">
+                        <rect key="frame" x="0.0" y="59" width="430" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <navigationBarAppearance key="standardAppearance">
+                            <color key="backgroundColor" red="0.35686278339999999" green="0.41568624970000001" blue="0.50196081400000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <textAttributes key="titleTextAttributes">
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </textAttributes>
+                            <textAttributes key="largeTitleTextAttributes">
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </textAttributes>
+                            <barButtonItemAppearance key="backButtonAppearance">
+                                <barButtonItemStateAppearance key="normal">
+                                    <textAttributes key="titleTextAttributes">
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </textAttributes>
+                                </barButtonItemStateAppearance>
+                                <barButtonItemStateAppearance key="highlighted"/>
+                                <barButtonItemStateAppearance key="disabled"/>
+                                <barButtonItemStateAppearance key="focused"/>
+                            </barButtonItemAppearance>
+                        </navigationBarAppearance>
+                        <navigationBarAppearance key="scrollEdgeAppearance">
+                            <color key="backgroundColor" red="0.35686278339999999" green="0.41568624970000001" blue="0.50196081400000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <textAttributes key="titleTextAttributes">
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </textAttributes>
+                            <textAttributes key="largeTitleTextAttributes">
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </textAttributes>
+                            <barButtonItemAppearance key="backButtonAppearance">
+                                <barButtonItemStateAppearance key="normal">
+                                    <textAttributes key="titleTextAttributes">
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </textAttributes>
+                                </barButtonItemStateAppearance>
+                                <barButtonItemStateAppearance key="highlighted"/>
+                                <barButtonItemStateAppearance key="disabled"/>
+                                <barButtonItemStateAppearance key="focused"/>
+                            </barButtonItemAppearance>
+                        </navigationBarAppearance>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="iqY-8b-sFF" kind="relationship" relationship="rootViewController" id="sYy-hM-4nt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mIF-sf-COn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1225" y="213"/>
+        </scene>
+        <!--Welcome-->
+        <scene sceneID="K8G-6t-ylh">
+            <objects>
+                <viewController id="iqY-8b-sFF" customClass="WelcomeViewController" customModule="OpenQuizz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bzg-Yt-GMf">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="829"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ueq-g2-ahH">
+                                <rect key="frame" x="146.33333333333337" y="616" width="137.66666666666663" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EyA-td-l2t">
+                                        <rect key="frame" x="0.0" y="0.0" width="137.66666666666666" height="40"/>
+                                        <color key="backgroundColor" red="0.40392160420000001" green="0.54901963470000004" blue="0.76470589639999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="1s7-7J-WMw"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Open Quizz">
+                                            <fontDescription key="titleFontDescription" name="Balham" family="Balham" pointSize="23"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="goToGameQuizz:" destination="iqY-8b-sFF" eventType="touchUpInside" id="qHX-W4-iQa"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ph-Tj-8ST">
+                                        <rect key="frame" x="0.0" y="60" width="137.66666666666666" height="40"/>
+                                        <color key="backgroundColor" red="0.40392160420000001" green="0.54901963470000004" blue="0.76470589639999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="UvW-9p-RBb"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Game Stats">
+                                            <fontDescription key="titleFontDescription" name="Balham" family="Balham" pointSize="23"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="eF9-CU-aoI" kind="show" id="ZUd-0S-kJx"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome  [playerName]   to Open Quizz!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RCW-DW-jFN">
+                                <rect key="frame" x="20" y="29.999999999999986" width="390" height="196.66666666666663"/>
+                                <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8yc-8Y-1v6"/>
+                        <color key="backgroundColor" red="0.35686278339999999" green="0.41568624970000001" blue="0.50196081400000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="RCW-DW-jFN" firstAttribute="top" secondItem="8yc-8Y-1v6" secondAttribute="top" constant="30" id="5CU-1t-229"/>
+                            <constraint firstItem="ueq-g2-ahH" firstAttribute="centerX" secondItem="Bzg-Yt-GMf" secondAttribute="centerX" id="7xR-Qz-KXU"/>
+                            <constraint firstItem="RCW-DW-jFN" firstAttribute="centerX" secondItem="Bzg-Yt-GMf" secondAttribute="centerX" id="9c2-Lj-NWI"/>
+                            <constraint firstItem="8yc-8Y-1v6" firstAttribute="bottom" secondItem="ueq-g2-ahH" secondAttribute="bottom" constant="30" id="WGl-jq-11k"/>
+                            <constraint firstAttribute="trailing" secondItem="RCW-DW-jFN" secondAttribute="trailing" constant="20" id="xEG-Js-72G"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Welcome" id="XOz-iW-2ka"/>
+                    <connections>
+                        <outlet property="gameStatsButton" destination="6Ph-Tj-8ST" id="aK2-Bd-x5m"/>
+                        <outlet property="welcomeMessageLabel" destination="RCW-DW-jFN" id="sna-Qt-UnY"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="segueToQuizz" id="9k5-Ua-WNN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JZn-2l-e79" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-525.60000000000002" y="211.84407796101951"/>
+        </scene>
+        <!--Stats View Controller-->
+        <scene sceneID="W8a-aR-irC">
+            <objects>
+                <viewController id="eF9-CU-aoI" customClass="StatsViewController" customModule="OpenQuizz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n31-Mg-iF8" customClass="State">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="829"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Stats" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HG4-0b-FZd">
+                                <rect key="frame" x="99" y="30.000000000000004" width="194" height="39.333333333333343"/>
+                                <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="55Y-LF-F6H">
+                                <rect key="frame" x="20" y="104.33333333333337" width="390" height="333"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Nov-X8-yxv">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="23.666666666666668"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Matches Played:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o6V-pf-F4E">
+                                                <rect key="frame" x="0.0" y="0.0" width="356.66666666666669" height="23.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="24"/>
+                                                <color key="textColor" red="1" green="0.89646406970000003" blue="0.82359499270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="axc-3m-QNo">
+                                                <rect key="frame" x="376.66666666666669" y="0.0" width="13.333333333333314" height="23.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="24"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="axc-3m-QNo" firstAttribute="leading" secondItem="o6V-pf-F4E" secondAttribute="trailing" constant="20" id="StS-4c-wOT"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="WAF-OZ-i8z">
+                                        <rect key="frame" x="0.0" y="43.666666666666657" width="390" height="23.666666666666671"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TopScore:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cCp-ZL-l8Y">
+                                                <rect key="frame" x="0.0" y="0.0" width="390" height="23.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="24"/>
+                                                <color key="textColor" red="1" green="0.89646406970000003" blue="0.82359499270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="44t-Iz-BGO">
+                                        <rect key="frame" x="0.0" y="87.333333333333343" width="390" height="23.666666666666671"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TopScorePlayerLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ym3-l4-BrV">
+                                                <rect key="frame" x="0.0" y="0.0" width="223.66666666666666" height="23.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="24"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SU9-yv-C6o">
+                                                <rect key="frame" x="376.66666666666669" y="0.0" width="13.333333333333314" height="23.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="24"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="AGJ-bP-IvN">
+                                        <rect key="frame" x="0.0" y="130.99999999999997" width="390" height="23.666666666666657"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top 5 Players:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eh1-ch-FZu">
+                                                <rect key="frame" x="0.0" y="0.0" width="390" height="23.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="24"/>
+                                                <color key="textColor" red="1" green="0.89646406970000003" blue="0.82359499270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0Mu-aA-gLn">
+                                        <rect key="frame" x="0.0" y="174.66666666666663" width="390" height="158.33333333333337"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="dqD-JR-eXk">
+                                                <rect key="frame" x="0.0" y="0.0" width="390" height="23.666666666666668"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TopPlayer1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kQc-t1-Jgj">
+                                                        <rect key="frame" x="0.0" y="0.0" width="121.66666666666667" height="23.666666666666668"/>
+                                                        <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="24"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VDU-OO-j2i">
+                                                        <rect key="frame" x="376.66666666666669" y="0.0" width="13.333333333333314" height="23.666666666666668"/>
+                                                        <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="24"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="fVq-S5-Hgk">
+                                                <rect key="frame" x="0.0" y="33.666666666666686" width="390" height="23.666666666666671"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TopPlayer2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5fE-JO-ZF5">
+                                                        <rect key="frame" x="0.0" y="0.0" width="121.66666666666667" height="23.666666666666668"/>
+                                                        <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="24"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IHu-cw-c4T">
+                                                        <rect key="frame" x="376.66666666666669" y="0.0" width="13.333333333333314" height="23.666666666666668"/>
+                                                        <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="24"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="uN4-VI-cGA">
+                                                <rect key="frame" x="0.0" y="67.333333333333314" width="390" height="23.666666666666671"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TopPlayer3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rbn-jB-vhZ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="121.66666666666667" height="23.666666666666668"/>
+                                                        <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="24"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z8O-Q4-yuJ">
+                                                        <rect key="frame" x="376.66666666666669" y="0.0" width="13.333333333333314" height="23.666666666666668"/>
+                                                        <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="24"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="KOv-rK-BR5">
+                                                <rect key="frame" x="0.0" y="101" width="390" height="23.666666666666671"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TopPlayer4" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i5J-SZ-7mQ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="121.66666666666667" height="23.666666666666668"/>
+                                                        <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="24"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TNN-co-bwr">
+                                                        <rect key="frame" x="376.66666666666669" y="0.0" width="13.333333333333314" height="23.666666666666668"/>
+                                                        <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="24"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="2Dd-DD-23a">
+                                                <rect key="frame" x="0.0" y="134.66666666666663" width="390" height="23.666666666666657"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TopPlayer5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fE5-oH-Wrj">
+                                                        <rect key="frame" x="0.0" y="0.0" width="121.66666666666667" height="23.666666666666668"/>
+                                                        <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="24"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J6m-r5-b1G">
+                                                        <rect key="frame" x="376.66666666666669" y="0.0" width="13.333333333333314" height="23.666666666666668"/>
+                                                        <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="24"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="P7B-ve-cOG"/>
+                        <color key="backgroundColor" red="0.35686278339999999" green="0.41568624970000001" blue="0.50196081400000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="P7B-ve-cOG" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="HG4-0b-FZd" secondAttribute="trailing" symbolic="YES" id="0vi-cC-Tcz"/>
+                            <constraint firstItem="P7B-ve-cOG" firstAttribute="trailing" secondItem="55Y-LF-F6H" secondAttribute="trailing" constant="20" id="2aG-Di-IWI"/>
+                            <constraint firstItem="55Y-LF-F6H" firstAttribute="top" secondItem="HG4-0b-FZd" secondAttribute="bottom" constant="35" id="C4C-A7-6y6"/>
+                            <constraint firstItem="HG4-0b-FZd" firstAttribute="leading" secondItem="P7B-ve-cOG" secondAttribute="leading" constant="99" id="aex-AA-ZDa"/>
+                            <constraint firstItem="55Y-LF-F6H" firstAttribute="leading" secondItem="P7B-ve-cOG" secondAttribute="leading" constant="20" id="hHR-H9-opO"/>
+                            <constraint firstItem="55Y-LF-F6H" firstAttribute="centerX" secondItem="n31-Mg-iF8" secondAttribute="centerX" id="jKV-yK-4As"/>
+                            <constraint firstItem="HG4-0b-FZd" firstAttribute="top" secondItem="P7B-ve-cOG" secondAttribute="top" constant="30" id="mA5-SX-y7p"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="1N0-vL-08L"/>
+                    <connections>
+                        <outlet property="topPlayerLabel1" destination="kQc-t1-Jgj" id="ECZ-wK-muI"/>
+                        <outlet property="topPlayerLabel2" destination="5fE-JO-ZF5" id="bSy-xO-jO7"/>
+                        <outlet property="topPlayerLabel3" destination="rbn-jB-vhZ" id="t3E-h2-NSB"/>
+                        <outlet property="topPlayerLabel4" destination="i5J-SZ-7mQ" id="PFC-tW-Jkg"/>
+                        <outlet property="topPlayerLabel5" destination="fE5-oH-Wrj" id="pJc-bv-yGW"/>
+                        <outlet property="topScoreLabel" destination="SU9-yv-C6o" id="ecf-Pz-98b"/>
+                        <outlet property="topScoreLabel1" destination="VDU-OO-j2i" id="jDS-a5-90U"/>
+                        <outlet property="topScoreLabel2" destination="IHu-cw-c4T" id="rfe-0Y-c9g"/>
+                        <outlet property="topScoreLabel3" destination="Z8O-Q4-yuJ" id="bdy-e9-wZH"/>
+                        <outlet property="topScoreLabel4" destination="TNN-co-bwr" id="NdK-AW-ibs"/>
+                        <outlet property="topScoreLabel5" destination="J6m-r5-b1G" id="glw-W9-MSP"/>
+                        <outlet property="topScorePlayerLabel" destination="Ym3-l4-BrV" id="Ul4-Mv-cfh"/>
+                        <outlet property="totalMatchesPlayedLabel" destination="axc-3m-QNo" id="INJ-HJ-zol"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YF9-ZU-g0c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="206.51162790697674" y="542.06008583690993"/>
+        </scene>
+        <!--Quizz View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="QuizzViewController" customModule="OpenQuizz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="829"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0/10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4bS-3v-l6z">
+                                <rect key="frame" x="131.66666666666666" y="315" width="166.99999999999997" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="167" id="Jt6-Nd-dgr"/>
+                                    <constraint firstAttribute="height" constant="59.999999999992042" id="PN1-Dp-Pkr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="33"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gG9-dd-Kpz" customClass="QuestionView" customModule="OpenQuizz" customModuleProvider="target">
+                                <rect key="frame" x="93" y="35" width="245" height="245"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Questions will appear inside of this box" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lPr-A2-cs0" userLabel="label">
+                                        <rect key="frame" x="5" y="5" width="235" height="235"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="235" id="KTM-yN-r70"/>
+                                            <constraint firstAttribute="width" constant="235" id="qXJ-FJ-8zr"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="23"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Icon Correct" translatesAutoresizingMaskIntoConstraints="NO" id="szY-89-MkZ">
+                                        <rect key="frame" x="104.66666666666666" y="202" width="36" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="89Z-G9-gRX"/>
+                                            <constraint firstAttribute="width" constant="36" id="h2w-y8-PVa"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.75294119120000003" green="0.77254903320000001" blue="0.78823530669999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="szY-89-MkZ" secondAttribute="bottom" constant="8" id="1Cl-iy-Qle"/>
+                                    <constraint firstAttribute="height" constant="245" id="Ck8-7R-ozk"/>
+                                    <constraint firstItem="lPr-A2-cs0" firstAttribute="centerX" secondItem="gG9-dd-Kpz" secondAttribute="centerX" id="Etb-mG-N1r"/>
+                                    <constraint firstItem="szY-89-MkZ" firstAttribute="centerX" secondItem="lPr-A2-cs0" secondAttribute="centerX" id="Owm-Jl-NsY"/>
+                                    <constraint firstAttribute="width" constant="245" id="Sx5-1J-5qC"/>
+                                    <constraint firstItem="lPr-A2-cs0" firstAttribute="top" secondItem="gG9-dd-Kpz" secondAttribute="top" constant="5" id="n5c-A7-vfS"/>
+                                    <constraint firstItem="lPr-A2-cs0" firstAttribute="centerY" secondItem="gG9-dd-Kpz" secondAttribute="centerY" id="zXB-vx-4hi"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="icon" destination="szY-89-MkZ" id="xqJ-L1-WGZ"/>
+                                    <outlet property="label" destination="lPr-A2-cs0" id="uKV-03-fl0"/>
+                                </connections>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jAk-Yi-IS8">
+                                <rect key="frame" x="115" y="585" width="200" height="150"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SN3-YA-XUd">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="65"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pXX-sL-eja">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="65"/>
+                                                <color key="backgroundColor" red="0.40392160420000001" green="0.54901963470000004" blue="0.76470589639999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="200" id="YZJ-ad-4Il"/>
+                                                    <constraint firstAttribute="height" constant="65" id="fXm-JB-6tS"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="New Game">
+                                                    <fontDescription key="titleFontDescription" name="Balham" family="Balham" pointSize="23"/>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="didTapNewGameButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="BZ3-Zs-e2C"/>
+                                                </connections>
+                                            </button>
+                                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="WBT-Pb-9Bn">
+                                                <rect key="frame" x="81.666666666666657" y="14" width="37" height="37"/>
+                                            </activityIndicatorView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="65" id="4Kr-QY-Wc2"/>
+                                            <constraint firstItem="pXX-sL-eja" firstAttribute="centerY" secondItem="SN3-YA-XUd" secondAttribute="centerY" id="9gy-YK-tRA"/>
+                                            <constraint firstItem="WBT-Pb-9Bn" firstAttribute="centerY" secondItem="pXX-sL-eja" secondAttribute="centerY" id="WIv-xV-H75"/>
+                                            <constraint firstItem="WBT-Pb-9Bn" firstAttribute="centerX" secondItem="pXX-sL-eja" secondAttribute="centerX" id="Xgd-c5-FEc"/>
+                                            <constraint firstAttribute="width" constant="200" id="YIK-h0-nRQ"/>
+                                            <constraint firstItem="pXX-sL-eja" firstAttribute="centerX" secondItem="SN3-YA-XUd" secondAttribute="centerX" id="dwq-AB-p6u"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vQ4-jH-YF2">
+                                        <rect key="frame" x="0.0" y="85" width="200" height="65"/>
+                                        <color key="backgroundColor" red="0.40392160420000001" green="0.54901963470000004" blue="0.76470589639999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="v4q-BC-fFk"/>
+                                            <constraint firstAttribute="height" constant="65" id="y58-AH-dhQ"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Config">
+                                            <fontDescription key="titleFontDescription" name="Balham" family="Balham" pointSize="23"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="rpH-mi-Jy8" kind="unwind" unwindAction="unwindToConfigWithSegue:" id="NeW-8y-Ny2"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.35686278339999999" green="0.41568624970000001" blue="0.50196081400000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="gG9-dd-Kpz" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="280" id="2tN-r4-ZbP"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="jAk-Yi-IS8" secondAttribute="bottom" constant="20" id="35A-eI-nqS"/>
+                            <constraint firstItem="gG9-dd-Kpz" firstAttribute="centerX" secondItem="jAk-Yi-IS8" secondAttribute="centerX" constant="0.5" id="HxQ-3q-C6w"/>
+                            <constraint firstItem="4bS-3v-l6z" firstAttribute="top" secondItem="gG9-dd-Kpz" secondAttribute="bottom" constant="35" id="O3E-aj-VSy"/>
+                            <constraint firstItem="gG9-dd-Kpz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="SE3-3X-0Dq"/>
+                            <constraint firstItem="4bS-3v-l6z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gFn-BL-EEs"/>
+                            <constraint firstItem="jAk-Yi-IS8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kFt-hU-OiM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="v2n-SW-oXk"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="WBT-Pb-9Bn" id="9hh-so-Lz5"/>
+                        <outlet property="newGameButton" destination="pXX-sL-eja" id="if3-D6-xgz"/>
+                        <outlet property="questionView" destination="gG9-dd-Kpz" id="gqh-as-n0M"/>
+                        <outlet property="scoreLabel" destination="4bS-3v-l6z" id="bpB-Xc-0an"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="rpH-mi-Jy8" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="206.51162790697674" y="-127.4678111587983"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Icon Correct" width="36" height="35"/>
+        <image name="Loading" width="241" height="290"/>
+        <image name="gamecontroller.fill" catalog="system" width="128" height="79"/>
+        <image name="gearshape.fill" catalog="system" width="128" height="123"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
